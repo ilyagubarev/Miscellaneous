@@ -1,4 +1,4 @@
-package testapplication;
+package com.ilyagubarev.projects.miscellaneous.testapp;
 
 /**
  * Test application main class.
@@ -15,6 +15,6 @@ public abstract class Main {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-
+        // add logic here...
     }
 }
