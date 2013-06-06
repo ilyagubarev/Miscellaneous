@@ -4,7 +4,7 @@ import java.util.Date;
 import java.io.FileWriter;
 import java.io.Writer;
 
-import com.ilyagubarev.projects.miscellaneous.diamonds.core.DiamondPresenterEnhanced;
+import com.ilyagubarev.projects.miscellaneous.diamonds.core.DiamondPresenterStained;
 
 /**
  * Diamonds project tester.
@@ -19,16 +19,17 @@ public abstract class DiamondsTester {
      * Tests diamonds presenters.
      *
      * @param height diamond height.
-     * @param contentSymbol custom symbol for diamond drawing.
+     * @param contentSymbols custom symbol for diamond drawing.
      * @param canvasSymbol custom symbol for canvas drawing.
      * @param useRectangleCanvas true for rectangular canvas.
      * @param outputFilename file for output (null for console).
      */
-    public static void test(int height, char contentSymbol, char canvasSymbol,
-            boolean useRectangleCanvas, String outputFilename) {
+    public static void test(int height, char[] contentSymbols,
+            char canvasSymbol, boolean useRectangleCanvas,
+            String outputFilename) {
         try {
-            DiamondPresenterEnhanced presenter = new DiamondPresenterEnhanced();
-            presenter.setContentSymbol(contentSymbol);
+            DiamondPresenterStained presenter = new DiamondPresenterStained();
+            presenter.setContentSymbols(contentSymbols);
             presenter.setCanvasSymbol(canvasSymbol);
             presenter.setRectangularCanvas(useRectangleCanvas);
             System.out.println(String.format("> creating a new diamond with height of %d...", height));
@@ -48,7 +49,7 @@ public abstract class DiamondsTester {
             System.out.println("> report:");
             System.out.println(String.format("\tmax width: %d", presenter.getMaxWidth(height)));
             System.out.println(String.format("\tfaceted: %b", presenter.isFaceted(height)));
-            System.out.println(String.format("\telapsed time: %d milliseconds", elapsedTime));
+            System.out.println(String.format("\telapsed time: %d millisecond(s)", elapsedTime));
         } catch (Exception e) {
             System.out.println(String.format("> a following error occured: %s", e.getLocalizedMessage()));
         }

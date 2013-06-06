@@ -24,6 +24,7 @@ public abstract class Main {
      * Tests diamonds project.
      */
     private static void testDiamonds() {
-        DiamondsTester.test(91, '*', ' ', true, "c:\\test.log");
+        char[] diamondMatter = new char[] { '*', ' ', ' ' };
+        DiamondsTester.test(31, diamondMatter, ' ', true, null);
     }
 }

@@ -11,7 +11,8 @@ import com.ilyagubarev.projects.miscellaneous.diamonds.resources.Defaults;
  * @version 1.02, 03 June 2013
  * @since 02 June 2013
  * @author Ilya Gubarev
- */public class DiamondPresenterEnhanced extends DiamondPresenterBasic {
+ */
+public class DiamondPresenterEnhanced extends DiamondPresenterBasic {
 
     /**
      * Content drawing symbol by default.
@@ -110,14 +111,6 @@ import com.ilyagubarev.projects.miscellaneous.diamonds.resources.Defaults;
         _rectangularCanvas = rectangularCanvas;
     }
 
-    /**
-     * Creates and writes a single line of string representation of a diamond.
-     *
-     * @param length line length.
-     * @param contentLength length of a content.
-     * @param writer character output stream.
-     * @throws IOException if streaming error occurs.
-     */
     @Override
     protected void writeViewLine(int length, int contentLength, Writer writer)
             throws IOException {
