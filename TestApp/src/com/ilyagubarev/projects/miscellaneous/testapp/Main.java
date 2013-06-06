@@ -1,5 +1,7 @@
 package com.ilyagubarev.projects.miscellaneous.testapp;
 
+import com.ilyagubarev.projects.miscellaneous.diamonds.testing.DiamondsTester;
+
 /**
  * Test application main class.
  *
@@ -15,6 +17,13 @@ public abstract class Main {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        // add logic here...
+        testDiamonds();
+    }
+
+    /**
+     * Tests diamonds project.
+     */
+    private static void testDiamonds() {
+        DiamondsTester.test(91, '*', ' ', true, "c:\\test.log");
     }
 }
