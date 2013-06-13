@@ -1,6 +1,9 @@
 package com.ilyagubarev.projects.miscellaneous.testapp;
 
 import com.ilyagubarev.projects.miscellaneous.diamonds.testing.DiamondsTester;
+import com.ilyagubarev.projects.miscellaneous.stringtricks.testing.StringTricksTester;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Test application main class.
@@ -17,7 +20,7 @@ public abstract class Main {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        testDiamonds();
+        testStringTricks();
     }
 
     /**
@@ -26,5 +29,19 @@ public abstract class Main {
     private static void testDiamonds() {
         char[] diamondMatter = new char[] { '*', ' ', ' ' };
         DiamondsTester.test(31, diamondMatter, ' ', true, null);
+    }
+
+    /**
+     * Tests string reversion.
+     */
+    private static void testStringTricks() {
+        List<String> strings = new LinkedList<String>();
+        strings.add("zalando");
+        strings.add("abc");
+        strings.add(null);
+        strings.add("");
+        strings.add("1");
+        strings.add("sd");
+        StringTricksTester.testReverse(strings);
     }
 }
